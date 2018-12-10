@@ -1,0 +1,803 @@
+/* General Features */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Yatra One', cursive;
+}
+
+body p {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Header Features */
+header {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../images/header.jpg');
+    height: 750px;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 58% 75%, 50% 92%, 41% 75%, 0% 75%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 58% 75%, 50% 92%, 41% 75%, 0% 75%);
+}
+
+header .decor {
+    top: 84%;
+}
+
+header .menu-icon {
+    display: none;
+    position: absolute;
+    top: 3%;
+    right: 10%;
+}
+
+header .menu-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+header .menu-icon:hover {
+    cursor: pointer;
+}
+
+/* Nav Bar Features */
+.menu ul,
+main nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 3% 0;
+    list-style: none;
+    text-align: center;
+}
+
+.menu ul li,
+main nav ul li {
+    width:10%;
+    margin: 0 .7%;
+}
+
+.menu ul li:nth-child(1),
+.menu ul li:nth-child(2),
+main nav ul li:nth-child(1),
+main nav ul li:nth-child(2) {
+    width: 8%;
+}
+
+.menu ul li a,
+main nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.menu ul li:hover a,
+main nav ul li:hover a {
+    border-bottom: 2px solid white;
+    padding-bottom: 7%;
+}
+
+.small-menu {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    background-color: black;
+    height: inherit;
+    width: 100%;
+    z-index: 2;
+}
+
+.small-menu nav ul {
+    margin-top: 40%;
+}
+
+.small-menu .close {
+    position: absolute;
+    top: 3%;
+    right: 10%;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.small-menu nav ul li a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+    margin: 5% auto;
+    width: 100%;
+    border-bottom: 2px solid #a54369;
+}
+
+.small-menu nav ul li a:hover,
+.small-menu .close:hover,
+header .menu-icon:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Introduction Features */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 78%;
+}
+
+.intro h1 {
+    margin: 0 1rem 1rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    height: 8%;
+    font-family: 'Yatra One', cursive;
+}
+
+#portfolio-btn {
+    width: 13%;
+    padding: .95rem 0;
+    background-color: #a54369;
+    color: white;
+    border: transparent;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.2rem;
+    margin: 0 auto 1%;
+}
+
+#portfolio-btn::before,
+#portfolio-btn::after {
+    content: '';
+    position: absolute;
+    border-top: 1.65rem solid #a54369;
+    border-bottom: 1.65rem solid #a54369;
+    top: 0;
+}
+
+#portfolio-btn::before {
+    left: -14%;
+    border-left: 1.5em solid transparent;
+    border-right: 0 solid #a54369;
+}
+
+#portfolio-btn::after {
+    left: 100%;
+    border-right:1.5em solid transparent;
+    border-left: 0 solid #a54369;
+}
+
+#portfolio-btn:hover {
+    cursor: pointer;
+    color: #a54369;
+    background-color: white;
+}
+
+#portfolio-btn:hover::before {
+    border-color: white;
+    border-left-color: transparent;
+}
+
+#portfolio-btn:hover::after {
+    border-color: white;
+    border-right-color: transparent;
+}
+
+#portfolio-btn a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#portfolio-btn:hover a {
+    color: #a54369
+}
+
+/* Main Features */
+main article .container {
+    width: 70%;
+    margin: auto;
+}
+
+/* Main Nav Features */
+main nav {
+    width: 100%;
+    background-color: rgba(93, 92, 92, 0.46);
+    position: fixed;
+    top: 0;
+    z-index : 100;
+}
+
+main nav::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-color: #a54369;
+}
+
+main nav ul {
+    height: 2rem;
+    padding-top: 1.7%;
+}
+
+main nav ul li a {
+    color: white;
+    display: inline-block;
+}
+
+/* Articles Features */
+main article {
+    text-align: center;
+    padding-top: 8%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 3rem;
+}
+
+main article .decor,
+header .decor {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    background-color: #aaa;
+    margin: 0;
+    position: absolute;
+    left: 43.5%;
+    transform: rotateZ(-45deg);
+    z-index: -1;
+}
+
+main article .decor {
+    top: -99px;
+}
+
+main article h2 {
+    position: relative;
+    margin: 2% 0 1%;
+    padding-top: 3%;
+    font-variant: small-caps;
+    font-size: 2rem;
+}
+
+/* Code Icon Features */
+main article .code-icon {
+    display: inline-block;
+    position: relative;
+}
+
+main article .code-icon::before,
+main article .code-icon::after {
+    content: '';
+    position: absolute;
+    width: 104%;
+    height: 25%;
+    top: 33%;
+}
+
+main article .code-icon::before {
+    left: -115%;
+}
+
+
+main article .code-icon::after {
+    left: 115%;
+}
+
+/* About Content Features */
+#about .code-icon::before,
+#about .code-icon::after,
+#contact .code-icon::before,
+#contact .code-icon::after {
+    background-color: #aaa;
+}
+
+#about .content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4% 0;
+}
+
+#about .content .image {
+    width: 36%;
+}
+
+#about .content img {
+    max-width: 100%;
+    border-radius: 5px;
+    border: 5px solid #aaa;
+    padding: 2%;
+}
+
+#about .content p {
+    width: 50%;
+    margin: 2% 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+/* Skills Content Features */
+#skills .decor{
+    background-color: white;
+    z-index: 2
+}
+
+#skills .code-icon::before,
+#skills .code-icon::after,
+#portfolio .code-icon::before,
+#portfolio .code-icon::after {
+    background-color: #a54369;
+}
+
+#skills .content {
+    text-align: left;
+}
+
+#skills .content .progress {
+    height: 30px;
+    background-color: white;
+    position: relative;
+}
+
+#skills .content .progress .meter {
+    height: 100%;
+    background-color: #b15377;
+    display: inline-block;
+    width: 0;
+}
+
+#skills .content .progress .percent {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 16%;
+}
+
+#skills .content #html .percent,
+#skills .content #responsive .percent {
+    left: 87%;
+}
+
+#skills .content #css .percent,
+#skills .content #js .percent {
+    left: 82%;
+}
+
+#skills .content #bootstrap .percent {
+    left: 72%;
+}
+
+/* Portfolio Content Features */
+#portfolio {
+    background-color: #aaa;
+}
+
+#portfolio .decor {
+    background-color: #222;
+    z-index: 2;
+}
+
+#portfolio .code-icon::before,
+#portfolio .code-icon::after {
+    width: 200%;
+}
+
+#portfolio .code-icon::before {
+    left: -213%;
+}
+
+#portfolio .work {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 4% 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#portfolio .work .project {
+    width: 32.3%;
+    height: 150px;
+    overflow: hidden;
+    margin: 3% .5%;
+    position: relative;
+}
+
+#portfolio .work .project:hover {
+    cursor: pointer;
+}
+
+#portfolio .work .project:hover .overlay,
+#portfolio .work .project:hover p {
+    display: none;
+}
+
+#portfolio .work .project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-color: rgba(86, 84, 84, 0.32);
+    content: '';
+}
+
+#portfolio .work .project p {
+    position: absolute;
+    margin: 0;
+    display: inline-block;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    padding: 4% 0;
+    font-weight: bold;
+    background-color: rgba(4, 4, 4, 0.46);
+    color: white;
+}
+
+#portfolio .work .project img {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Contact content Features */
+#contact .code-icon::before,
+#contact .code-icon::after {
+    width: 150%;
+}
+
+#contact .code-icon::before {
+    left: -165%;
+}
+
+#contact .content {
+    margin-top: 5%;
+}
+
+#contact p {
+    font-size: 1.2rem;
+}
+
+#contact .social-icons a {
+    margin: 1% .5%;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+}
+
+#contact .social-icons a:hover {
+    cursor: pointer;
+    transform: scale(1.3)
+}
+
+/* Footer Features */
+footer {
+    background-color: #222;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center
+}
+
+footer p {
+    width: 33.3%;
+    text-align: center;
+}
+
+footer p span {
+    font-weight: bold; 
+}
+
+footer p a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+/* General Classes */
+.white-text {
+    color: white;
+}
+
+.pink-text {
+    color: #a54369;
+}
+
+.black-text {
+    color: #222;
+}
+
+.grey-bg {
+    background-color: #222;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1290px) {
+    #portfolio-btn::before {
+        border-left: 1.2em solid transparent;
+    }
+    
+    main article .decor,
+    header .decor {
+        left: 42%
+    }
+
+    main article:not(#about) h2 {
+        margin: 4% 0 1%;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    #portfolio-btn {
+        width: 16%;
+    }
+
+    #portfolio-btn::before {
+        border-left: 1.3em solid transparent;
+    }
+    
+    main article .decor,
+    header .decor {
+        left: 43%;
+        width: 150px;
+        height: 150px;
+    }
+
+    main nav ul {
+        height: 4rem;
+        padding-top: 2%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    #portfolio-btn {
+        width: 21%;
+    }
+
+    #portfolio-btn::before {
+        border-left: 1.4em solid transparent;
+    }
+    
+    main article .decor,
+    header .decor {
+        left: 41%;
+    }
+
+    main nav ul {
+        padding-top: 2.5%;
+    }
+
+    .menu ul li,
+    main nav ul li {
+        width: 14%;
+    }
+
+    .menu ul li:nth-child(1),
+    .menu ul li:nth-child(2),
+    main nav ul li:nth-child(1),
+    main nav ul li:nth-child(2) {
+        width: 12%;
+    }
+
+    #about .content .image {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    #about .content p {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #portfolio-btn {
+        width: 27%;
+    }
+
+    #portfolio-btn::before {
+        border-left: 1.5em solid transparent;
+    }
+    
+    main article .decor,
+    header .decor {
+        left: 44%;
+        width: 80px;
+        height: 80px;
+    }
+
+    main article .decor {
+        top: -49px;
+    }
+
+    header .decor {
+        top: 93%;
+    }
+
+    
+    #skills .content #html .percent,
+    #skills .content #responsive .percent {
+        left: 85%;
+    }
+
+    #skills .content #css .percent,
+    #skills .content #js .percent {
+        left: 80%;
+    }
+
+    #skills .content #bootstrap .percent {
+        left: 70%;
+    }
+
+    #portfolio .work .project {
+        width: 49%;
+    }
+
+    footer p {
+        width: 50%;
+    }
+
+    footer p:last-of-type {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header .menu-icon {
+        display: inline-block;
+    }
+
+    header .menu {
+        display: none;
+    }
+
+    #portfolio-btn {
+        width: 37%;
+    }
+    
+    main nav ul {
+        padding-top: 4%;
+        justify-content: none;
+    }
+
+    main nav ul li {
+        width: 25%
+    }
+
+    main nav ul li:nth-child(1),
+    main nav ul li:nth-child(2) {
+        width: 23%;
+    }
+
+    main article .decor,
+    header .decor {
+        left: 45%;
+        width: 50px;
+        height: 50px;
+    }
+
+    main article .decor {
+        top: -25px;
+    }
+
+    header .decor {
+        top: 96.5%;
+    }
+
+    #skills .content #html .percent,
+    #skills .content #responsive .percent {
+        left: 81%;
+    }
+
+    #skills .content #css .percent,
+    #skills .content #js .percent {
+        left: 76%;
+    }
+
+    #skills .content #bootstrap .percent {
+        left: 66%;
+    }
+
+    footer p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #portfolio-btn {
+        margin: 3% auto 1%;
+    }
+    
+    #portfolio-btn::before {
+        border-left: 1.18em solid transparent;
+    }
+
+    main article:not(:last-of-type) {
+        min-height: 100vh;
+    }
+    
+    main nav ul {
+        padding-top: 5%;
+    }
+
+    #skills .content .progress {
+        height: 25px;
+    }
+
+    #skills .content h3 {
+        margin-bottom: .5rem;
+    }
+    
+    #portfolio .work .project {
+        width: 99%;
+    }
+
+    #contact .social-icons a {
+        margin: 1% 4.5%; 
+    }
+}
+
+@media screen and (max-width: 365px) {
+    #portfolio-btn {
+        width: 40%;
+    }
+
+    #portfolio-btn::before {
+        border-left: 1.1em solid transparent;
+    }
+
+    #portfolio-btn a {
+        font-size: 1.1rem;
+    }
+    
+    main nav{
+        display: none;
+    }
+
+    main article .decor,
+    header .decor {
+        left: 42%; 
+    }
+    
+    #about .content p {
+        font-size: 1rem;
+    }
+
+    #skills .content #html .percent,
+    #skills .content #responsive .percent {
+        left: 78%;
+    }
+
+    #skills .content #css .percent,
+    #skills .content #js .percent {
+        left: 73%;
+    }
+
+    #skills .content #bootstrap .percent {
+        left: 63%;
+    }
+}
