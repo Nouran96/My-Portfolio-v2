@@ -414,11 +414,63 @@ main article .code-icon::after {
     left: 72%;
 }
 
-/* #skills .content progress {
+/* Helping Resource: https://css-tricks.com/html5-progress-element/ */
+
+#skills .content progress {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
-} */
+    border: none;
+    width: 100%;
+    height: 30px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+            box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+    color: #b15377;
+    position: relative;
+}
+
+/* Webkit browsers support */
+#skills .content progress::-webkit-progress-bar {
+    background-color: whiteSmoke;
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+            box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+
+#skills .content progress::-webkit-progress-value {
+    background-color: #b15377;
+}
+
+/* Firefox support */
+#skills .content progress::-moz-progress-bar {
+    background-color: #b15377;
+}
+
+h3[data-value] {
+    position: relative; 
+}
+
+h3[data-value]:after {
+    content: attr(data-value) '%';
+    position: absolute;
+    right: 1%;
+    top: 180%;
+    z-index: 2;
+}
+
+.progress-bar {
+    background-color: whiteSmoke;
+    -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+            box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+    width: 100%;
+    height:30px;
+}
+
+.progress-bar span {
+    background-color: #b15377;  
+    display: block;
+    text-indent: -9999px;
+}
 
 /* Portfolio Content Features */
 #portfolio {
@@ -814,9 +866,9 @@ footer p a:hover {
         height: 25px;
     }
 
-    #skills .content h3 {
+    /* #skills .content h3 {
         margin-bottom: .5rem;
-    }
+    } */
     
     #portfolio .work .project {
         width: 99%;
