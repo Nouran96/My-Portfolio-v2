@@ -53,7 +53,7 @@ function showFixedNav() {
         header = document.querySelector('header');
 
     // Appear before the end of the header
-    if (document.documentElement.scrollTop >= header.clientHeight - 2) {
+    if (document.documentElement.scrollTop >= header.clientHeight - 100) {
         fixedNav.classList.remove('hidden');
     }
     else {

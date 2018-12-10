@@ -18,7 +18,7 @@ header {
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url('../images/header.jpg');
     height: 750px;
-    background-position: center;
+    background-position: bottom;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -294,6 +294,11 @@ main article .code-icon::after {
 }
 
 /* About Content Features */
+#about {
+    padding-top: 0;
+    margin-top: -4%;
+}
+
 #about .code-icon::before,
 #about .code-icon::after,
 #contact .code-icon::before,
