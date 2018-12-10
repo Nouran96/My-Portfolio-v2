@@ -1,6 +1,7 @@
 /* General Features */
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html, body {
@@ -15,6 +16,12 @@ body p {
 
 /* Header Features */
 header {
+    background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))),
+                url('../images/header.jpg');
+    background: -webkit-linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../images/header.jpg');
+    background: -o-linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../images/header.jpg');
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url('../images/header.jpg');
     height: 750px;
@@ -50,8 +57,12 @@ header .menu-icon:hover {
 /* Nav Bar Features */
 .menu ul,
 main nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     margin: 0;
     padding: 3% 0;
     list-style: none;
@@ -126,9 +137,16 @@ header .menu-icon:hover {
 
 /* Introduction Features */
 .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 78%;
 }
 
@@ -252,7 +270,9 @@ main article .decor{
     margin: 0;
     position: absolute;
     left: 43.5%;
-    transform: rotateZ(-45deg);
+    -webkit-transform: rotateZ(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotateZ(-45deg);
     z-index: -1;
 }
 
@@ -306,8 +326,11 @@ main article .code-icon::after {
 }
 
 #about .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin: 4% 0;
 }
 
@@ -325,9 +348,16 @@ main article .code-icon::after {
 #about .content p {
     width: 50%;
     margin: 2% 6%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: left;
     font-size: 1.2rem;
     line-height: 1.5;
@@ -384,6 +414,12 @@ main article .code-icon::after {
     left: 72%;
 }
 
+/* #skills .content progress {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+} */
+
 /* Portfolio Content Features */
 #portfolio {
     background-color: #aaa;
@@ -404,9 +440,15 @@ main article .code-icon::after {
 }
 
 #portfolio .work {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin: 4% 0;
     flex-wrap: wrap;
     width: 100%;
@@ -484,17 +526,27 @@ main article .code-icon::after {
 
 #contact .social-icons a:hover {
     cursor: pointer;
-    transform: scale(1.3)
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3)
 }
 
 /* Footer Features */
 footer {
     background-color: #222;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center
 }
 
 footer p {
@@ -516,6 +568,9 @@ footer p a:hover {
 }
 
 /* General Classes */
+.white-text, ::-moz-selection {
+    color: white;
+}
 .white-text, ::selection {
     color: white;
 }
@@ -526,6 +581,10 @@ footer p a:hover {
 
 .black-text {
     color: #222;
+}
+
+.grey-bg, ::-moz-selection {
+    background-color: #222;
 }
 
 .grey-bg, ::selection {
@@ -686,7 +745,9 @@ footer p a:hover {
     
     main nav ul {
         padding-top: 4%;
-        justify-content: none;
+        -webkit-box-pack: none;
+            -ms-flex-pack: none;
+                justify-content: none;
     }
 
     main nav ul li {
