@@ -27,9 +27,9 @@ header {
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 58% 75%, 50% 92%, 41% 75%, 0% 75%);
 }
 
-header .decor {
+/* header .decor {
     top: 84%;
-}
+} */
 
 header .menu-icon {
     display: none;
@@ -238,16 +238,15 @@ main nav ul li a {
 /* Articles Features */
 main article {
     text-align: center;
-    padding-top: 8%;
+    padding-top: 10%;
     position: relative;
     overflow: hidden;
     padding-bottom: 3rem;
 }
 
-main article .decor,
-header .decor {
-    width: 200px;
-    height: 200px;
+main article .decor{
+    width: 180px;
+    height: 180px;
     max-width: 100%;
     background-color: #aaa;
     margin: 0;
@@ -331,6 +330,7 @@ main article .code-icon::after {
     justify-content: center;
     text-align: left;
     font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 /* Skills Content Features */
@@ -516,7 +516,7 @@ footer p a:hover {
 }
 
 /* General Classes */
-.white-text {
+.white-text, ::selection {
     color: white;
 }
 
@@ -528,7 +528,7 @@ footer p a:hover {
     color: #222;
 }
 
-.grey-bg {
+.grey-bg, ::selection {
     background-color: #222;
 }
 
