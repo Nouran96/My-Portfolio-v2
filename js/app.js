@@ -14,7 +14,7 @@ var scroll = new SmoothScroll('a[href*="#"]');
 
 // Global Variables
 var skillsLink = document.getElementById('skills-link'), // skills anchor link in nav bar
-    progressBars = document.querySelectorAll('.progress'), // array for all progress bar elements
+    progressBars = document.querySelectorAll('progress'), // array for all progress bar elements
     scrollTop = 0, // for checking the scrolltop value if anchor link is clicked
     mobileMenu = document.querySelector('.small-menu'),
     mobileMenuLinks = mobileMenu.querySelectorAll('a'),
@@ -68,16 +68,16 @@ function loadBar() {
     // if scrolled into the section or by clicking the link in nav bar
     if (document.documentElement.scrollTop >= about.scrollHeight + 200 || scrollTop === 1332) {
         progressBars.forEach(function (elem) {
-            var elemPercent = elem.querySelector('.percent'), // used for getting the width of the meter
-                elemMeter = elem.querySelector('.meter'),
-                elemWidth = parseInt(elemPercent.textContent), // width of the meter
+            // var elemPercent = elem.querySelector('.percent'), // used for getting the width of the meter
+            //     elemMeter = elem.querySelector('.meter'),
+            var elemWidth = elem.value, // width of the meter
                 i = 1;
 
             var interval = setInterval(function () {
                 if (i === elemWidth) {
                     clearInterval(interval); // stops when the specified width is reached
                 } else {
-                    elemMeter.style.width = i + '%';
+                    elem.value = i;
                     i++;
                 }
             }, 10);
