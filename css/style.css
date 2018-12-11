@@ -17,21 +17,21 @@ body p {
 /* Header Features */
 header {
     background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))),
-                url('../images/header.jpg');
+                url('../images/header-min.jpg');
     background: -webkit-linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('../images/header.jpg');
+                url('../images/header-min.jpg');
     background: -o-linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('../images/header.jpg');
+                url('../images/header-min.jpg');
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('../images/header.jpg');
+                url('../images/header-min.jpg');
     height: 750px;
     background-position: bottom;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 58% 75%, 50% 92%, 41% 75%, 0% 75%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 58% 75%, 50% 92%, 41% 75%, 0% 75%);
+    /* -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 58% 75%, 50% 92%, 41% 75%, 0% 75%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 58% 75%, 50% 92%, 41% 75%, 0% 75%); */
 }
 
 /* header .decor {
@@ -256,20 +256,20 @@ main nav ul li a {
 /* Articles Features */
 main article {
     text-align: center;
-    padding-top: 10%;
+    padding-top: 7%;
     position: relative;
     overflow: hidden;
     padding-bottom: 3rem;
 }
 
 main article .decor{
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     max-width: 100%;
     background-color: #aaa;
     margin: 0;
     position: absolute;
-    left: 43.5%;
+    left: 45%;
     -webkit-transform: rotateZ(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotateZ(-45deg);
@@ -314,8 +314,34 @@ main article .code-icon::after {
 
 /* About Content Features */
 #about {
-    padding-top: 0;
-    margin-top: -4%;
+    padding-top: 7%;
+    margin-top: -7%;
+    position: relative;
+}
+
+#about::before,
+#about::after {
+    content: '';
+    width: 50%;
+    height: 122px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+#about::before {
+    left: 0;
+    -webkit-transform: translateX(-44px) skewX(45deg);
+        -ms-transform: translate(-43px, 28px) skewX(45deg);
+            transform: translateX(-44px) skewX(45deg);
+}
+
+#about::after {
+    right: 0;
+    -webkit-transform: translateX(44px) skewX(-45deg);
+        -ms-transform: translate(40px, 28px) skewX(-45deg);
+            transform: translateX(44px) skewX(-45deg);
 }
 
 #about .code-icon::before,
@@ -453,7 +479,7 @@ h3[data-value] {
 h3[data-value]:after {
     content: attr(data-value) '%';
     position: absolute;
-    right: 1%;
+    right: 1rem;
     top: 180%;
     z-index: 2;
 }
