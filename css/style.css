@@ -314,15 +314,15 @@ main article .code-icon::after {
 
 /* About Content Features */
 #about {
-    padding-top: 7%;
-    margin-top: -7%;
+    padding-top: 7rem;
+    margin-top: -7rem;
     position: relative;
 }
 
 #about::before,
 #about::after {
     content: '';
-    width: 50%;
+    width: 51%;
     height: 122px;
     background-color: white;
     position: absolute;
@@ -332,16 +332,16 @@ main article .code-icon::after {
 
 #about::before {
     left: 0;
-    -webkit-transform: translateX(-44px) skewX(45deg);
-        -ms-transform: translate(-43px, 28px) skewX(45deg);
-            transform: translateX(-44px) skewX(45deg);
+    -webkit-transform: translateX(-51px) skewX(45deg);
+        -ms-transform: translateX(-51px) skewX(45deg);
+            transform: translateX(-51px) skewX(45deg);
 }
 
 #about::after {
     right: 0;
-    -webkit-transform: translateX(44px) skewX(-45deg);
-        -ms-transform: translate(40px, 28px) skewX(-45deg);
-            transform: translateX(44px) skewX(-45deg);
+    -webkit-transform: translateX(51px) skewX(-45deg);
+        -ms-transform: translateX(51px) skewX(-45deg);
+            transform: translateX(51px) skewX(-45deg);
 }
 
 #about .code-icon::before,
@@ -705,6 +705,15 @@ footer p a:hover {
         height: 150px;
     }
 
+    #about {padding-top: 5.5rem}
+
+    #about::before,
+    #about::after {
+        width: 53%;
+        height: 120px;
+        /* top: 33px; */
+    }
+
     main nav ul {
         height: 4rem;
         padding-top: 2%;
@@ -774,6 +783,15 @@ footer p a:hover {
 
     main article .decor {
         top: -49px;
+    }
+
+    #about {padding-top: 7rem}
+
+    #about::before,
+    #about::after {
+        width: 55%;
+        height: 75px;
+        top: 54px;
     }
 
     header .decor {
@@ -852,6 +870,13 @@ footer p a:hover {
         top: 96.5%;
     }
 
+    #about::after,
+    #about::before {
+        width: 58%;
+        height: 60px;
+        top: 63px;
+    }
+
     #skills .content #html .percent,
     #skills .content #responsive .percent {
         left: 81%;
@@ -882,6 +907,11 @@ footer p a:hover {
 
     main article:not(:last-of-type) {
         min-height: 100vh;
+    }
+
+    #about::after,
+    #about::before {
+        width: 60%;
     }
     
     main nav ul {
