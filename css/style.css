@@ -527,16 +527,16 @@ h3[data-value]:after {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    justify-content: center;
     margin: 4% 0;
-    flex-wrap: wrap;
     width: 100%;
 }
 
 #portfolio .work .project {
-    width: 32.3%;
+    width: calc((100% / 3) - 2%);
     height: 150px;
     overflow: hidden;
-    margin: 3% .5%;
+    margin: 3% 1%;
     position: relative;
 }
 
@@ -575,6 +575,7 @@ h3[data-value]:after {
 #portfolio .work .project img {
     max-width: 100%;
     width: 100%;
+    min-height: 100%;
 }
 
 /* Contact content Features */
@@ -814,7 +815,7 @@ footer p a:hover {
     }
 
     #portfolio .work .project {
-        width: 49%;
+        width: 48%;
     }
 
     footer p {
